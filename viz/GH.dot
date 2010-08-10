@@ -1,14 +1,4 @@
 strict graph Github {
-        node [shape=circle, style=filled, nodesep = "1", labelangle="90"];
-        size="10,10";
-        concentrate="true";
-        repulsiveforce="0.2";
-        overlap="prism";
-        smoothing="spring";
-        splines="true";
-        
-        edge [len=3];
-
 	saucelabs -- dcolish	 [weight=5];
 	trenton -- notbenh	 [weight=1];
 	reductivelabs -- blkperl	 [weight=1];
@@ -37,9 +27,6 @@ strict graph Github {
 	marcusramberg -- leto	 [weight=3];
 	gitpan -- notbenh	 [weight=1];
 	gitpan -- theory	 [weight=1];
-	ramen -- angavrilov	 [weight=1];
-	ramen -- defnull	 [weight=1];
-	ramen -- twilio	 [weight=1];
 	ramen -- consumer	 [weight=1];
 	ramen -- robhudson	 [weight=1];
 	ramen -- thelema	 [weight=1];
@@ -52,6 +39,9 @@ strict graph Github {
 	ramen -- zbskii	 [weight=2];
 	ramen -- washingtontimes	 [weight=1];
 	ramen -- alwold	 [weight=3];
+	ramen -- twilio	 [weight=1];
+	ramen -- defnull	 [weight=1];
+	ramen -- angavrilov	 [weight=1];
 	ramen -- benatkin	 [weight=3];
 	ramen -- webiest	 [weight=3];
 	ramen -- simonw	 [weight=1];
@@ -125,11 +115,11 @@ strict graph Github {
 	SamuraiJack -- theory	 [weight=1];
 	jlawler -- leto	 [weight=1];
 	jvoorhis -- leto	 [weight=3];
-	drd -- jnpdx	 [weight=3];
 	drd -- ddollar	 [weight=3];
 	drd -- blkperl	 [weight=3];
 	drd -- greghaynes	 [weight=3];
 	drd -- mpstx	 [weight=2];
+	drd -- jnpdx	 [weight=3];
 	drd -- chromakode	 [weight=3];
 	drd -- dcolish	 [weight=3];
 	drd -- TampaRuby	 [weight=2];
@@ -255,15 +245,6 @@ strict graph Github {
 	maddingue -- theory	 [weight=3];
 	PurplePanda -- greghaynes	 [weight=2];
 	kender -- zacharyp	 [weight=1];
-	theory -- bricoleurs	 [weight=1];
-	theory -- KevinField	 [weight=1];
-	theory -- chrismessina	 [weight=1];
-	theory -- xzilla	 [weight=1];
-	theory -- fhelmberger	 [weight=2];
-	theory -- zrusilla	 [weight=2];
-	theory -- beaudet	 [weight=1];
-	theory -- masak	 [weight=1];
-	theory -- gugod	 [weight=3];
 	theory -- rjray	 [weight=3];
 	theory -- Aurich	 [weight=1];
 	theory -- chrisdolan	 [weight=1];
@@ -288,6 +269,15 @@ strict graph Github {
 	theory -- maxclark	 [weight=1];
 	theory -- bingos	 [weight=3];
 	theory -- nothingmuch	 [weight=3];
+	theory -- gugod	 [weight=3];
+	theory -- masak	 [weight=1];
+	theory -- beaudet	 [weight=1];
+	theory -- zrusilla	 [weight=2];
+	theory -- fhelmberger	 [weight=2];
+	theory -- xzilla	 [weight=1];
+	theory -- KevinField	 [weight=1];
+	theory -- bricoleurs	 [weight=1];
+	theory -- chrismessina	 [weight=1];
 	theory -- schparque	 [weight=2];
 	theory -- cdent	 [weight=1];
 	theory -- wu	 [weight=3];
@@ -367,11 +357,11 @@ strict graph Github {
 	fiam -- chromakode	 [weight=2];
 	L34h -- notbenh	 [weight=2];
 	greghaynes -- blkperl	 [weight=3];
-	greghaynes -- "spencer-krum"	 [weight=2];
 	greghaynes -- davidlazar	 [weight=3];
 	greghaynes -- slubman	 [weight=2];
 	greghaynes -- srbs	 [weight=2];
 	greghaynes -- hunner	 [weight=1];
+	greghaynes -- "spencer-krum"	 [weight=2];
 	greghaynes -- chromakode	 [weight=3];
 	greghaynes -- zacharyp	 [weight=3];
 	greghaynes -- txwikinger	 [weight=2];
@@ -411,9 +401,9 @@ strict graph Github {
 	davidlazar -- zacharyp	 [weight=1];
 	davidlazar -- dcolish	 [weight=5];
 	davidlazar -- arik181	 [weight=3];
-	markwkm -- mhagander	 [weight=1];
 	markwkm -- jhelwig	 [weight=2];
 	markwkm -- notbenh	 [weight=3];
+	markwkm -- mhagander	 [weight=1];
 	markwkm -- dcolish	 [weight=3];
 	markwkm -- gorthx	 [weight=1];
 	stevedekorte -- leto	 [weight=1];
@@ -437,11 +427,11 @@ strict graph Github {
 	bdaniel -- "PSU-TheCat"	 [weight=2];
 	avsm -- dcolish	 [weight=5];
 	davorg -- notbenh	 [weight=1];
-	notbenh -- tene	 [weight=1];
-	notbenh -- fhelmberger	 [weight=2];
-	notbenh -- perl6	 [weight=1];
 	notbenh -- bpetering	 [weight=1];
 	notbenh -- jhelwig	 [weight=2];
+	notbenh -- perl6	 [weight=1];
+	notbenh -- fhelmberger	 [weight=2];
+	notbenh -- tene	 [weight=1];
 	notbenh -- exodist	 [weight=3];
 	notbenh -- jrockway	 [weight=3];
 	notbenh -- Ovid	 [weight=1];
