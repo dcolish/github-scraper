@@ -1,6 +1,14 @@
 strict graph Github {
-        node [shape=box,style=filled];
+        node [shape=circle, style=filled, nodesep = "1", labelangle="90"];
+        size="10,10";
+        concentrate="true";
+        repulsiveforce="0.2";
+        overlap="prism";
+        smoothing="spring";
+        splines="true";
+        
         edge [len=3];
+
 	saucelabs -- dcolish	 [weight=5];
 	trenton -- notbenh	 [weight=1];
 	reductivelabs -- blkperl	 [weight=1];

@@ -1,0 +1,4 @@
+dev
+*.pyc
+*.png
+auth.cfg

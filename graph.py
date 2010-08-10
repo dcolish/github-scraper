@@ -1,5 +1,6 @@
 # from json import JSONEncoder
 # from random import randrange
+from ConfigParser import SafeConfigParser
 from couchdb import Database
 from time import sleep
 from networkx import Graph
@@ -11,11 +12,13 @@ from scraper import (
     get_user_following,
     get_top_repos,
 )
+conf = SafeConfigParser()
+conf.read('auth.cfg')
 
 GH = Graph(name="Github")
 me = 'dcolish'
-max_depth = 1
-db = Database('http://localhost:5984/firehouse')
+max_depth = 10
+db = Database(conf.get('db', 'db_url'))
 
 select_all = """
 function (doc) {
@@ -34,9 +37,9 @@ function (doc) {
 
 
 def crawl_user(user, depth=0):
-
     followers = get_user_followers(user)
     following = get_user_following(user)
+
     if not db.query(select_user % user):
         db.save({'user': user, 'followers': followers, 'following': following})
 
@@ -81,11 +84,11 @@ def graph_user(user, depth=0):
 
 
 if __name__ == "__main__":
-    ###crawl_user(me)
+    crawl_user(me)
 
-    graph_user(me)
-    nx.draw_graphviz(GH)
-    nx.write_dot(GH, 'GH.dot')
+    # graph_user(me)
+    # nx.draw_graphviz(GH)
+    # nx.write_dot(GH, 'GH.dot')
 
     # output = open('data.js', 'w')
 
@@ -95,6 +98,7 @@ if __name__ == "__main__":
     #           'target': data.index(target),
     #           'value': 1}
     #          for source, target in sorted(GH.edges())[:100]]
+
     # json_values = {'nodes': [{'nodename': x, 'group': randrange(5)}
     #                          for x in data],
     #                'links': links}

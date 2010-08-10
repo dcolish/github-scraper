@@ -43,4 +43,3 @@ def get_user_followers(user):
     resp = urlopen(query)
     key = 'users'
     return data_parse(resp, key)
-
